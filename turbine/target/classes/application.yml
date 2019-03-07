@@ -1,0 +1,20 @@
+#端口设置
+server:
+  port: 8801
+
+#服务名称
+spring:
+  application:
+    name: turbine
+
+#注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8800/eureka/
+
+#turbine配置，app-config监控服务（多个则，分隔），cluster-name-expression指定集群名称，combine-host-port合并同一个host多个端口数据
+turbine:
+  app-config: feignclient
+#   cluster-name-expression: default
+  combine-host-port: true
